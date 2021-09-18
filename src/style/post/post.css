@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;300&display=swap");
+* {
+  padding: 0px;
+  font-family: "Barlow", sans-serif;
+}
+
+.post {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  margin-right: auto;
+}
+
+.post .creactPost {
+  width: 400px;
+  height: 100px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  display: flex;
+  box-shadow: 0px 0px 15px 2px #d2dcef;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.post .creactPost .avt-user {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  position: relative;
+  margin: auto;
+}
+
+.post .creactPost button {
+  width: 300px;
+  height: 40px;
+  border-radius: 20px;
+  margin: auto;
+  background-color: #c7c7c7;
+  font-weight: 700;
+}
+
+.post .list-post {
+  width: 400px;
+  height: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.post .list-post .post-component {
+  display: flex;
+  height: auto;
+  box-shadow: 0px 0px 15px 2px #d2dcef;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  flex-direction: column;
+}
+
+.post .list-post .post-component .headerPost {
+  width: 360px;
+  height: 50px;
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.post .list-post .post-component .headerPost .avt-poster {
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+  position: relative;
+  margin: auto;
+}
+
+.post .list-post .post-component .headerPost .detail {
+  margin-left: 10px;
+}
+
+.post .list-post .post-component .headerPost .detail .name-poster {
+  font-weight: 700;
+  white-space: nowrap;
+  margin-bottom: 0px;
+}
+
+.post .list-post .post-component .headerPost .detail .time-posted {
+  margin-bottom: 0px;
+  font-size: 12px;
+}
+
+.post .list-post .post-component .bodyPost .content-poster {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.post .list-post .post-component .bodyPost .file-attach {
+  width: 400px;
+  height: auto;
+}
+
+.post .list-post .post-component .footerPost {
+  height: auto;
+}
+
+.post .list-post .post-component .footerPost .parameter {
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+  margin-bottom: auto;
+  justify-content: space-between;
+}
+
+.post .list-post .post-component .footerPost .parameter .parameter-readed {
+  text-align: left;
+  margin-left: 5px;
+}
+
+.post .list-post .post-component .footerPost .parameter .parameter-readed img {
+  width: 50px;
+  height: 50px;
+}
+
+.post .list-post .post-component .footerPost .parameter .parameter-comment {
+  text-align: right;
+  margin-right: 5px;
+}
+
+.post .list-post .post-component .footerPost hr {
+  width: 380px;
+  margin: auto;
+  height: 0.3px;
+}
+
+.post .list-post .post-component .footerPost .react {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.post .list-post .post-component .footerPost .react .bt-react {
+  width: 200px;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #626262;
+  font-size: 14px;
+  background-color: white !important;
+}
+
+.post .list-post .post-component .footerPost .react .bt-readed img {
+  width: 20px;
+  height: 20px;
+}
+
+.post .list-post .post-component .footerPost .react .bt-comment img {
+  width: 20px;
+  height: 20px;
+}
+
+.post .list-post .post-component .areaComment {
+  display: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post .list-post .post-component .areaComment .avt-poster {
+  width: 40px;
+  border-radius: 20px;
+  position: relative;
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.post .list-post .post-component .areaComment .inputGroup {
+  display: flex;
+  border-radius: 20px;
+  border: 1px solid gray;
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.post .list-post .post-component .areaComment .inputGroup .inputComment {
+  max-width: 350px;
+  border: none;
+  height: 30px;
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  outline-style: none;
+  margin-left: 15px;
+  border-radius: 20px;
+  padding: 5spx;
+}
+
+.post .list-post .post-component .areaComment .inputGroup .sendMessage {
+  width: 25px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0);
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.post .list-post .post-component .areaCommentDisplay {
+  display: flex;
+  transition-duration: 1s;
+}
+
+@media only screen and (max-width: 723px) {
+  .post .creactPost {
+    width: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    box-shadow: none;
+  }
+  .post .creactPost .avt-user {
+    display: none;
+  }
+  .post .creactPost button {
+    width: 75%;
+    margin: auto;
+  }
+}
+/*# sourceMappingURL=post.css.map */

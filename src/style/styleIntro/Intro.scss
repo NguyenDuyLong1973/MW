@@ -1,0 +1,937 @@
+$color1: #727272;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+}
+li {
+    list-style-type: none;
+    text-decoration: none;
+}
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+button {
+    border-style: none;
+    background-color: rgb(43, 89, 178);
+}
+// lam lai
+* {
+    width: 100%;
+}
+.barHeader {
+    background-color: rgba(255, 255, 0, 0);
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    position: absolute;
+    color: black;
+    justify-content: space-between;
+    .sideLeft {
+        height: auto;
+        margin-left: 10px;
+        .sideLeft1 {
+            margin-left: 0px;
+            padding-left: 0px;
+            display: flex;
+            a {
+                img {
+                    width: 180px;
+                    height: 85px;
+                }
+            }
+        }
+        .sideLeft2 {
+            display: none;
+            a {
+                img {
+                    width: 120px;
+                    height: 85px;
+                }
+            }
+        }
+    }
+    .sideRight {
+        height: auto;
+        margin-right: 20px;
+        .sideRight1 {
+            flex: 3;
+            box-sizing: border-box;
+            display: flex;
+            .listItems {
+                width: 100%;
+                display: flex;
+                margin-top: 30px;
+                margin-bottom: 20px;
+                li {
+                    width: 100%;
+                    display: flex;
+                    a {
+                        width: 80px;
+                        font-size: 14px;
+                        color: white;
+                    }
+                    .linkHover:hover {
+                        margin-top: -5px;
+                        transition: 0.5s;
+                        transition-duration: 0.5s;
+                        font-size: 16px;
+                        font-weight: bold;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .sideRight2 {
+            width: 100%;
+            flex: 1;
+            display: none;
+            button {
+                width: auto;
+                height: auto;
+                background-color: rgba(255, 255, 0, 0);
+                border-style: none;
+                margin-top: 25px;
+                margin-bottom: 25px;
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
+.containerSlide {
+    z-index: 0;
+    position: relative;
+    width: 100%;
+    height: 620px;
+    //đặc biệt
+    .active{
+        opacity: 1;
+    }
+    //
+    .slideItems {
+        display: flex;
+        height: 620px;
+        position: absolute;
+        // opacity: 0;
+        .item1 {
+            position: absolute;
+            img {
+                height: 620px;
+                background-size: auto;
+            }
+        }
+        .item2 {
+            position: absolute;
+            margin: auto;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            h1 {
+                font-size: 72px;
+                color: white;
+                margin-top: 200px;
+                text-align: center;
+                font-weight: 700;
+            }
+            p {
+                width: 80%;
+                color: white;
+                font-size: 20px;
+                margin: auto;
+                text-align: center;
+                margin-top: 20px;
+            }
+            button {
+                margin: auto;
+                margin-top: 40px;
+                width: 120px;
+                height: 45px;
+                font-size: 15px;
+                font-weight: 700;
+                color: white;
+                border-radius: 5px;
+            }
+        }
+    }
+    .buttonSlide {
+        justify-content: space-between;
+        display: flex;
+        height: 100px;
+        display: flex;  
+        z-index: 0;
+        top: 0px;
+        position: absolute;
+        .bt {
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 70px;
+            height: 60px;
+            z-index: 0;
+            background-color: rgba(255, 255, 0, 0);
+            &:hover {
+                background-color: rgba(46, 46, 40, 0.3);
+            }
+        }
+    }
+}
+.introComponent {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 150px;
+    .textWaterMaskComponent {
+        height: 100px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 0;
+        position: relative;
+        p {
+            width: 100%;
+            z-index: 0;
+            font-size: 23px;
+            font-weight: bold;
+            text-align: center;
+            position: absolute;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            opacity: 0.05;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -30px;
+        }
+    }
+    .listIntroComponentItems {
+        display: flex;
+        flex-direction: row;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        .itemComponent {
+            width: 300px;
+            height: 120px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            .circle {
+                width: 80px;
+                height: 80px;
+                border-radius: 50px;
+                background-color: rgb(43, 89, 178);
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                img {
+                    width: 40px;
+                    height: 40px;
+                    margin: auto;
+                }
+            }
+            p {
+                text-align: center;
+                font-size: 12px;
+                margin-top: 10px;
+                margin-bottom: 5px;
+                margin-left: auto;
+                margin-right: auto;
+                color: $color1;
+            }
+        }
+    }
+    // .listIntroComponentItems1 {
+    //     .itemComponent {
+    //     }
+    // }
+    .listIntroComponentItems2 {
+        margin-top: 100px;
+        // .itemComponent {
+        // }
+    }
+}
+.featureComponent {
+    height: 710px;
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    border: 1px solid #eeeeee;
+    margin-top: 100px;
+    z-index: 0;
+    .imgDemo {
+        width: 50%;
+        height: 710px;
+        position: relative;
+        img {
+            height: 708px;
+            z-index: 0;
+            object-fit: cover;
+        }
+    }
+    .listFeature {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 100px;
+        .textWaterMaskComponent {
+            width: auto;
+            height: auto;
+            display: flex;
+            margin-top: auto;
+            margin-bottom: 50px;
+            p {
+                // margin-top: 40px;
+                z-index: 4;
+                font-size: 23px;
+                font-weight: bold;
+            }
+            img {
+                z-index: 3;
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                opacity: 0.05;
+                margin-top: -35px;
+            }
+        }
+        .containerDetail {
+            display: flex;
+            width: auto;
+            flex-direction: row;
+            box-sizing: border-box;
+            .containerIconDetail {
+                width: 50px;
+                height: 100px;
+                .iconDetail {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            .containerInforDetail {
+                margin-left: 20px;
+                .titleDetail {
+                    width: 100%;
+                    text-align: left;
+                    font-weight: 700;
+                    font-size: 16px;
+                }
+                .textDetail {
+                    width: 350px;
+                    height: 100px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: $color1;
+                }
+            }
+        }
+    }
+}
+.subsystemComponent {
+    width: 100%;
+    height: auto;
+    .titleSubsystemComponent {
+        font-size: 26px;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 60px;
+    }
+    .listSubsystem {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        .containerDetail {
+            display: flex;
+            width: 300px;
+            height: 200px;
+            flex-direction: row;
+            margin: auto;
+            .containerIconDetail {
+                width: 50px;
+                height: 50px;
+                .iconDetail {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            .containerInforDetail {
+                .titleDetail {
+                    text-align: left;
+                    font-weight: 700;
+                    font-size: 16px;
+                }
+                .textDetail {
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: $color1;
+                }
+            }
+        }
+    }
+    .buttonTry {
+        width: 120px;
+        height: 50px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        button {
+            margin-bottom: 20px;
+            width: 120px;
+            height: 45px;
+            font-size: 15px;
+            font-weight: 700;
+            color: white;
+            border-radius: 5px;
+        }
+    }
+}
+.approveComponent {
+    height: auto;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    .titleApproveComponent {
+        font-size: 26px;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    .approveItems {
+        display: flex;
+        flex-direction: row;
+        margin-top: 50px;
+        .imgDemoApprove {
+            width: 100%;
+            flex: 4;
+            img {
+                width: 100%;
+                height: 500px;
+                margin-top: 20px;
+            }
+        }
+        .listApprove {
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: 50px;
+            flex: 1;
+            .containerDetail {
+                display: flex;
+                width: auto;
+                height: 150px;
+                flex-direction: row;
+                margin: 5px;
+                .containerIconDetail {
+                    width: 50px;
+                    height: 100px;
+                    .iconDetail {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+                .containerInforDetail {
+                    margin-left: 20px;
+                    .titleDetail {
+                        text-align: left;
+                        margin-top: 0px;
+                        font-weight: 700;
+                        font-size: 16px;
+                    }
+                    .textDetail {
+                        width: 200px;
+                        height: 150px;
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: $color1;
+                    }
+                }
+            }
+        }
+    }
+    .buttonTry {
+        width: 140px;
+        height: 50px;
+        margin: auto;
+        button {
+            margin-bottom: 20px;
+            width: 120px;
+            height: 45px;
+            font-size: 15px;
+            font-weight: 700;
+            color: white;
+            border-radius: 5px;
+        }
+    }
+}
+.mantainComponent {
+    width: auto;
+    height: auto;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    .titleMantainComponent {
+        font-size: 26px;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    .mantainItems {
+        flex-direction: row;
+        display: flex;
+        .imgDemo {
+            width: 50%;
+            margin-top: 50px;
+            img {
+                height: 550px;
+            }
+        }
+        .listMantain {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            margin-left: 5px;
+            margin-right: 5px;
+            .containerDetail {
+                display: flex;
+                width: 100%;
+                height: 150px;
+                flex-direction: row;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                .containerIconDetail {
+                    width: 50px;
+                    height: 100px;
+                    .iconDetail {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+                .containerInforDetail {
+                    margin-left: 20px;
+                    .titleDetail {
+                        text-align: left;
+                        margin-top: 0px;
+                        font-weight: 700;
+                        font-size: 16px;
+                    }
+                    .textDetail {
+                        width: 350px;
+                        height: 100px;
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: $color1;
+                    }
+                }
+            }
+        }
+    }
+    .buttonTry {
+        width: 140px;
+        height: 50px;
+        margin: auto;
+        button {
+            margin-bottom: 20px;
+            width: 120px;
+            height: 45px;
+            font-size: 15px;
+            font-weight: 700;
+            color: white;
+            border-radius: 5px;
+        }
+    }
+}
+.sessionTablePriceComponent {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    .textWaterMaskComponent {
+        width: auto;
+        height: 100px;
+        display: flex;
+        margin-bottom: 100px;
+        p {
+            position: absolute;
+            font-size: 23px;
+            font-weight: bold;
+            text-align: center;
+        }
+        img {
+            z-index: 3;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100px;
+            height: 100px;
+            opacity: 0.05;
+            margin-top: -30px;
+        }
+    }
+    .listTablePriceComponents {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        .tablePriceComponent {
+            width: 25%;
+            height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: #2b59b2;
+            .headerH2 {
+                background-color: #2b59b2;
+                height: 40px;
+                margin-bottom: 20px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                .h2TablePriceComponent {
+                    font-weight: 700;
+                    color: white;
+                    font-size: 18px;
+                    text-align: center;
+                    margin-top: 0px;
+                    border-radius: 10px;
+                    padding-top: 10px;
+                }
+            }
+            .listItemTablePrice {
+                width: 100%;
+                height: 150px;
+                margin-left: 30px;
+                .itemTablePriceComponent {
+                    width: auto;
+                    display: flex;
+                    margin-right: auto;
+                    margin-left: auto;
+                    .iconItemTablePrice {
+                        width: 20px;
+                        height: 20px;
+                    }
+                    .textItemTableComponent {
+                        margin-right: 5px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+            hr {
+                width: 50%;
+            }
+            .h2TablePriceComponent {
+                font-weight: 700;
+                width: auto;
+                color: black;
+                font-size: 18px;
+                text-align: center;
+                margin-top: 0px;
+                border-radius: 10px;
+                padding-top: 10px;
+            }
+            .registerButton {
+                width: 140px;
+                height: 50px;
+                margin: auto;
+                button {
+                    margin-bottom: 20px;
+                    width: 140px;
+                    height: 45px;
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: white;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 723px) {
+    .barHeader {
+        position: fixed;
+        background-color: white;
+        .sideLeft {
+            width: auto;
+            height: auto;
+            .sideLeft1 {
+                display: none;
+            }
+            .sideLeft2 {
+                display: block;
+            }
+        }
+        .sideRight {
+            width: auto;
+            height: auto;
+            .sideRight1 {
+                display: none;
+            }
+            .sideRight2 {
+                display: block;
+                height: auto;
+            }
+        }
+    }
+    .containerSlide {
+        height: 200px;
+        .slideItems {
+            margin-top: 60px;
+            .item1 {
+                img {
+                    height: 200px;
+                }
+            }
+            .item2 {
+                h1 {
+                    margin-top: 50px;
+                    font-size: 23px;
+                }
+                p {
+                    display: none;
+                }
+                button {
+                    margin-top: 20px;
+                }
+            }
+        }
+        .buttonSlide {
+            top: 150px;
+            .bt {
+                width: 50px;
+                height: 30px;
+            }
+        }
+    }
+    .introComponent {
+        height: auto;
+        .textWaterMaskComponent {
+            p {
+                font-size: 20px;
+                img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+        .listIntroComponentItems {
+            flex-direction: column;
+            .itemComponent {
+                width: fit-content;
+            }
+        }
+        .listIntroComponentItems1 {
+            margin-top: 20px;
+        }
+        .listIntroComponentItems2 {
+            margin-top: 0px;
+        }
+    }
+    .featureComponent {
+        flex-direction: column;
+        height: auto;
+        .imgDemo {
+            width: 100%;
+            height: 100px;
+            img {
+                z-index: 0;
+                width: 100%;
+                height: 150px;
+            }
+        }
+        .listFeature {
+            margin-left: auto;
+            width: 100%;
+            flex-direction: column;
+            .textWaterMaskComponent {
+                p {
+                    font-size: 20px;
+                }
+            }
+            .containerDetail {
+                width: 100%;
+                .containerInforDetail {
+                    .titleDetail {
+                        font-size: 16px;
+                    }
+                    .textDetail {
+                        width: auto;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    .subsystemComponent {
+        height: auto;
+        .titleSubsystemComponent {
+            font-size: 20px;
+        }
+        .listSubsystem {
+            flex-direction: column;
+            width: auto;
+            height: auto;
+            .containerDetail {
+                .containerInforDetail {
+                    .textDetail {
+                        width: auto;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    .approveComponent {
+        .titleApproveComponent {
+            font-size: 20px;
+        }
+        .approveItems {
+            flex-direction: column;
+            .imgDemoApprove {
+                img {
+                    display: none;
+                }
+            }
+            .listApprove {
+                width: auto;
+                height: auto;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 0px;
+                .containerDetail {
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: auto;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .mantainComponent {
+        margin-top: 0px;
+        .mantainItems {
+            flex-direction: column;
+            .imgDemo {
+                img {
+                    // height: 550px;
+                    display: none;
+                }
+            }
+            .listMantain {
+                width: auto;
+                .containerDetail {
+                    height: auto;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    .containerInforDetail {
+                        .textDetail {
+                            width: auto;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sessionTablePriceComponent {
+        width: auto;
+        .listTablePriceComponents {
+            flex-direction: column;
+            .tablePriceComponent {
+                width: auto;
+                height: 400px;
+                border: 1px;
+                border-radius: 20px;
+                border-style: solid;
+                border-color: #2b59b2;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                .headerH2 {
+                    background-color: #2b59b2;
+                    height: 40px;
+                    .h2TablePriceComponent {
+                        width: auto;
+                        font-weight: 700;
+                        color: white;
+                        font-size: 18px;
+                        text-align: center;
+                        margin-top: 0px;
+                        border-top-left-radius: 20px;
+                        border-top-right-radius: 20px;
+                        padding-top: 10px;
+                    }
+                }
+                .listItemTablePrice {
+                    width: 100%;
+                    height: 150px;
+                    margin-left: 30px;
+                    .itemTablePriceComponent {
+                        width: auto;
+                        display: flex;
+                        margin-right: auto;
+                        margin-left: auto;
+                        .iconItemTablePrice {
+                            width: 20px;
+                            height: 20px;
+                        }
+                        .textItemTableComponent {
+                            margin-right: 5px;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+                hr {
+                    width: 50%;
+                }
+                .h2TablePriceComponent {
+                    font-weight: 700;
+                    width: auto;
+                    color: black;
+                    font-size: 18px;
+                    text-align: center;
+                    margin-top: 0px;
+                    border-radius: 10px;
+                    padding-top: 10px;
+                }
+                .registerButton {
+                    width: 140px;
+                    height: 50px;
+                    margin: auto;
+                    button {
+                        margin-bottom: 20px;
+                        width: 120px;
+                        height: 45px;
+                        font-size: 15px;
+                        font-weight: 700;
+                        color: white;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
