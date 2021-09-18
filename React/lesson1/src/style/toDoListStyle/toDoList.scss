@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    background: #eee;
+    border-radius: 2px;
+}
+
+.toDoListPage {
+    width: 100%;
+    max-height: 500px;
+    // display: flex;
+    // flex-direction: column;
+    .headerPage {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        // margin: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        .titleList {
+            width: 100px;
+            height: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            margin-left: 80px;
+            display: flex;
+            p {
+                margin: auto;
+            }
+        }
+        .sideRight {
+            display: flex;
+            flex-direction: row;
+            height: 40px;
+            .search-group {
+                width: auto;
+                display: flex;
+                flex-direction: row;
+                border: 1px;
+                border-style: solid;
+                border-color: #cccccc;
+                border-radius: 5px;
+                // margin-right: 10px;
+                margin: auto;
+                .bt-icon-search {
+                    width: auto;
+                    height: auto;
+                    background-color: white !important;
+                    margin: auto;
+                }
+                .input-serch {
+                    width: 100%;
+                    height: 40px;
+                    border: 0px;
+                    border: none;
+                    outline: none;
+                    margin: auto;
+                    padding: 10px;
+                }
+            }
+            .option {
+                display: flex;
+                flex-direction: row;
+                .btn {
+                    width: auto !important;
+                    height: 40px !important;
+                    // padding: 20px;
+                }
+                .btn-primary {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .full-screen {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(85, 84, 84, 0.5);
+        display: none;
+        position: fixed;
+        z-index: 3;
+        top: 0px;
+        left: 0px;
+        .area-form {
+            margin: auto;
+            width: 100%-50%;
+            height: 100%;
+            background-color: white;
+            overflow: scroll;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            .header-area-form {
+                width: 100%;
+                height: 60px;
+                background-color: white;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                p {
+                    width: auto;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    margin-left: 10px;
+                    font-weight: 700;
+                    font-size: 18px;
+                    font-family: "Barlow", sans-serif;
+                }
+                img {
+                    width: 25px;
+                    height: 25px;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    margin-right: 10px;
+                }
+            }
+            .group-form {
+                flex-direction: column;
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                .form-option {
+                    width: 100%;
+                    height: 50px;
+                    background-color: #cccccc;
+                    position: relative;
+                    display: flex;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    justify-content: space-between;
+                    p {
+                        width: auto;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                        margin-left: 10px;
+                        font-weight: 700;
+                        font-size: 14px;
+                        font-family: "Barlow", sans-serif;
+                    }
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                        margin-right: 10px;
+                        color: red !important;
+                    }
+                }
+                .form1 {
+                    width: 100%;
+                    height: auto;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    transition-duration: 10s;
+                    .formElemement1 {
+                        label {
+                            font-weight: 500;
+                            color: gray;
+                            margin-top: 5px;
+                            margin-bottom: 5px;
+                            span {
+                                color: red;
+                                margin-left: 2px;
+                                margin-right: 2px;
+                            }
+                        }
+                        input {
+                            border-radius: 5px;
+                            outline-style: none;
+                            border: solid 1px;
+                            border-color: gray;
+                            padding: 8px;
+                        }
+                    }
+                    .prioritized {
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        label {
+                            font-weight: 500;
+                            color: gray;
+                            margin-top: 5px;
+                            margin-bottom: 5px;
+                        }
+                        .groupCheckBox {
+                            display: flex;
+                            flex-direction: row;
+                            .checkBox {
+                                display: flex;
+                                flex-direction: row;
+                                label {
+                                    margin: auto;
+                                    white-space: nowrap;
+                                }
+                                input {
+                                    margin: auto;
+                                    border-radius: 50%;
+                                    // display: ;
+                                }
+                            }
+                        }
+                    }
+                    .text-area {
+                        label {
+                            font-weight: 500;
+                            color: gray;
+                            margin-top: 5px;
+                            margin-bottom: 5px;
+                            span {
+                                color: red;
+                                margin-left: 2px;
+                                margin-right: 2px;
+                            }
+                        }
+                        textarea {
+                            border-radius: 5px;
+                            height: 100px;
+                            outline-style: none;
+                            padding: 10px;
+                        }
+                    }
+                }
+                .form2 {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    transition-duration: 1s;
+                    .formElement2 {
+                        label {
+                            font-weight: 500;
+                            color: gray;
+                            margin-top: 5px;
+                            margin-bottom: 5px;
+                        }
+                        input {
+                            padding: 10px;
+                            border-radius: 5px;
+                            outline-style: none;
+                            border: solid 1px gray;
+                        }
+                    }
+                    .group-radio-box {
+                        display: flex;
+                        flex-direction: row;
+                        .checkBox {
+                            display: flex;
+                            flex-direction: row;
+                            label {
+                                margin: auto;
+                                white-space: nowrap;
+                            }
+                            input {
+                                margin: auto;
+                                width: auto;
+                                margin-right: 10px;
+                                border-radius: 50%;
+                                display: block;
+                            }
+                        }
+                    }
+                    .frequency {
+                        display: flex;
+                        flex-direction: row;
+                        select {
+                            flex: 1;
+                            height: 40px;
+                            outline-style: none;
+                            border-radius: 5px;
+                        }
+                        input {
+                            width: 100%;
+                            height: 40px;
+                            outline-style: none;
+                            border-radius: 5px;
+                            border: solid 1px;
+                        }
+                    }
+                    input {
+                        padding: 8px;
+                        border-radius: 5px;
+                        outline-style: none;
+                        border: solid 1px;
+                        margin-bottom: 10px;
+                    }
+                    .num {
+                        display: flex;
+                        flex-direction: row;
+                        label {
+                            margin: auto;
+                            white-space: nowrap;
+                        }
+                        input {
+                            margin: auto;
+                            width: auto;
+                            margin-right: 10px;
+                            border-radius: 50%;
+                            display: block;
+                        }
+                    }
+                    .beatPerTime {
+                        .beatPerTime1 {
+                            display: flex;
+                            flex-direction: row;
+                            label {
+                                width: auto;
+                                margin: 10px;
+                                white-space: nowrap;
+                            }
+                            .inputRepeat {
+                                width: auto;
+                                display: flex;
+                                flex-direction: row;
+                                border-radius: 5px;
+                                border: solid 1px gray;
+                                input {
+                                    width: 100%-50%;
+                                    // height: 40px;
+                                    outline-style: none;
+                                    border: none;
+                                }
+                                button {
+                                    width: auto;
+                                    height: auto;
+                                    background-color: rgba(255, 255, 255, 0);
+                                }
+                            }
+                            input {
+                                width: 100%-50%;
+                                height: 40px;
+                            }
+                        }
+                        .list-item {
+                            position: relative;
+                            select {
+                                width: 100%-60%;
+                                height: 120px;
+                                display: flex;
+                                padding: 10px;
+                                box-sizing: border-box;
+                                margin-top: 10px;
+                                margin-left: 60px;
+                                box-shadow: 0px 0px 15px 2px #d2dcef;
+                                background-color: white;
+                                position: absolute;
+                                z-index: 2;
+                                flex-direction: column;
+                                border-radius: 5px;
+                                outline-style: none;
+                                border-style: none;
+                                option {
+                                    white-space: nowrap;
+                                    font-weight: 500;
+                                    color: gray;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .display-full-screen {
+        display: flex;
+        overflow-x: hidden;
+    }
+    .container {
+        .row {
+            .col {
+                .btn {
+                    white-space: nowrap;
+                }
+                p {
+                    font-weight: 700 !important;
+                    line-height: 24px !important;
+                    font-size: 16px !important;
+                }
+            }
+        }
+    }
+    .marginContainer {
+        margin-left: 100px;
+        margin-top: 30px;
+    }
+    .listItemWork {
+        margin-left: 90px;
+        .container {
+            .row {
+                .col {
+                    margin: 10px;
+                    p {
+                        font-weight: 500 !important;
+                        line-height: 15px !important;
+                        font-size: 16px !important;
+                        color: gray;
+                    }
+                    .orange {
+                        color: orange;
+                    }
+                    .green {
+                        color: green;
+                    }
+                    .blue-sky {
+                        color: skyblue;
+                    }
+                    .red {
+                        color: red;
+                    }
+                    .blue {
+                        color: blue;
+                    }
+                    .black {
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+
+    .area-change-list {
+        margin: auto;
+        .list-change {
+            // width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            .bt-change-list {
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+.display-full-screen {
+    display: flex;
+    overflow-x: hidden;
+}
+@media only full-screen and (max-width: 324px) {
+}

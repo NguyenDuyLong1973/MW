@@ -1,0 +1,489 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #eee;
+  border-radius: 2px;
+}
+
+.toDoListPage {
+  width: 100%;
+  max-height: 500px;
+}
+
+.toDoListPage .headerPage {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.toDoListPage .headerPage .titleList {
+  width: 100px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 18px;
+  margin-left: 80px;
+  display: flex;
+}
+
+.toDoListPage .headerPage .titleList p {
+  margin: auto;
+}
+
+.toDoListPage .headerPage .sideRight {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+}
+
+.toDoListPage .headerPage .sideRight .search-group {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  border: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.toDoListPage .headerPage .sideRight .search-group .bt-icon-search {
+  width: auto;
+  height: auto;
+  background-color: white !important;
+  margin: auto;
+}
+
+.toDoListPage .headerPage .sideRight .search-group .input-serch {
+  width: 100%;
+  height: 40px;
+  border: 0px;
+  border: none;
+  outline: none;
+  margin: auto;
+  padding: 10px;
+}
+
+.toDoListPage .headerPage .sideRight .option {
+  display: flex;
+  flex-direction: row;
+}
+
+.toDoListPage .headerPage .sideRight .option .btn {
+  width: auto !important;
+  height: 40px !important;
+}
+
+.toDoListPage .headerPage .sideRight .option .btn-primary {
+  font-weight: 700;
+}
+
+.toDoListPage .full-screen {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(85, 84, 84, 0.5);
+  display: none;
+  position: fixed;
+  z-index: 3;
+  top: 0px;
+  left: 0px;
+}
+
+.toDoListPage .full-screen .area-form {
+  margin: auto;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  overflow: scroll;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.toDoListPage .full-screen .area-form .header-area-form {
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.toDoListPage .full-screen .area-form .header-area-form p {
+  width: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+}
+
+.toDoListPage .full-screen .area-form .header-area-form img {
+  width: 25px;
+  height: 25px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 10px;
+}
+
+.toDoListPage .full-screen .area-form .group-form {
+  flex-direction: column;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form-option {
+  width: 100%;
+  height: 50px;
+  background-color: #cccccc;
+  position: relative;
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  justify-content: space-between;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form-option p {
+  width: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: "Barlow", sans-serif;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form-option img {
+  width: 20px;
+  height: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 10px;
+  color: red !important;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form1 {
+  width: 100%;
+  height: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition-duration: 10s;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form1 .formElemement1 label {
+  font-weight: 500;
+  color: gray;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form1 .formElemement1 label span {
+  color: red;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form1 .formElemement1 input {
+  border-radius: 5px;
+  outline-style: none;
+  border: solid 1px;
+  border-color: gray;
+  padding: 8px;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form1 .prioritized {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form1 .prioritized label {
+  font-weight: 500;
+  color: gray;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form1 .prioritized .groupCheckBox {
+  display: flex;
+  flex-direction: row;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form1 .prioritized .groupCheckBox .checkBox {
+  display: flex;
+  flex-direction: row;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form1 .prioritized .groupCheckBox .checkBox label {
+  margin: auto;
+  white-space: nowrap;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form1 .prioritized .groupCheckBox .checkBox input {
+  margin: auto;
+  border-radius: 50%;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form1 .text-area label {
+  font-weight: 500;
+  color: gray;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form1 .text-area label span {
+  color: red;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form1 .text-area textarea {
+  border-radius: 5px;
+  height: 100px;
+  outline-style: none;
+  padding: 10px;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  transition-duration: 1s;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .formElement2 label {
+  font-weight: 500;
+  color: gray;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .formElement2 input {
+  padding: 10px;
+  border-radius: 5px;
+  outline-style: none;
+  border: solid 1px gray;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .group-radio-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .group-radio-box .checkBox {
+  display: flex;
+  flex-direction: row;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .group-radio-box .checkBox label {
+  margin: auto;
+  white-space: nowrap;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .group-radio-box .checkBox input {
+  margin: auto;
+  width: auto;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: block;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .frequency {
+  display: flex;
+  flex-direction: row;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .frequency select {
+  flex: 1;
+  height: 40px;
+  outline-style: none;
+  border-radius: 5px;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .frequency input {
+  width: 100%;
+  height: 40px;
+  outline-style: none;
+  border-radius: 5px;
+  border: solid 1px;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 input {
+  padding: 8px;
+  border-radius: 5px;
+  outline-style: none;
+  border: solid 1px;
+  margin-bottom: 10px;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .num {
+  display: flex;
+  flex-direction: row;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .num label {
+  margin: auto;
+  white-space: nowrap;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .num input {
+  margin: auto;
+  width: auto;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: block;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .beatPerTime .beatPerTime1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .beatPerTime .beatPerTime1 label {
+  width: auto;
+  margin: 10px;
+  white-space: nowrap;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .beatPerTime .beatPerTime1 .inputRepeat {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  border: solid 1px gray;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .beatPerTime .beatPerTime1 .inputRepeat input {
+  width: 50%;
+  outline-style: none;
+  border: none;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .beatPerTime .beatPerTime1 .inputRepeat button {
+  width: auto;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .beatPerTime .beatPerTime1 input {
+  width: 50%;
+  height: 40px;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .beatPerTime .list-item {
+  position: relative;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .beatPerTime .list-item select {
+  width: 40%;
+  height: 120px;
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-left: 60px;
+  box-shadow: 0px 0px 15px 2px #d2dcef;
+  background-color: white;
+  position: absolute;
+  z-index: 2;
+  flex-direction: column;
+  border-radius: 5px;
+  outline-style: none;
+  border-style: none;
+}
+
+.toDoListPage .full-screen .area-form .group-form .form2 .beatPerTime .list-item select option {
+  white-space: nowrap;
+  font-weight: 500;
+  color: gray;
+}
+
+.toDoListPage .display-full-screen {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.toDoListPage .container .row .col .btn {
+  white-space: nowrap;
+}
+
+.toDoListPage .container .row .col p {
+  font-weight: 700 !important;
+  line-height: 24px !important;
+  font-size: 16px !important;
+}
+
+.toDoListPage .marginContainer {
+  margin-left: 100px;
+  margin-top: 30px;
+}
+
+.toDoListPage .listItemWork {
+  margin-left: 90px;
+}
+
+.toDoListPage .listItemWork .container .row .col {
+  margin: 10px;
+}
+
+.toDoListPage .listItemWork .container .row .col p {
+  font-weight: 500 !important;
+  line-height: 15px !important;
+  font-size: 16px !important;
+  color: gray;
+}
+
+.toDoListPage .listItemWork .container .row .col .orange {
+  color: orange;
+}
+
+.toDoListPage .listItemWork .container .row .col .green {
+  color: green;
+}
+
+.toDoListPage .listItemWork .container .row .col .blue-sky {
+  color: skyblue;
+}
+
+.toDoListPage .listItemWork .container .row .col .red {
+  color: red;
+}
+
+.toDoListPage .listItemWork .container .row .col .blue {
+  color: blue;
+}
+
+.toDoListPage .listItemWork .container .row .col .black {
+  color: black;
+}
+
+.toDoListPage .area-change-list {
+  margin: auto;
+}
+
+.toDoListPage .area-change-list .list-change {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.toDoListPage .area-change-list .list-change .bt-change-list {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.display-full-screen {
+  display: flex;
+  overflow-x: hidden;
+}
+/*# sourceMappingURL=toDoList.css.map */

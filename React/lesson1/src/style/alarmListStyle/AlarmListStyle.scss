@@ -1,0 +1,135 @@
+.toDoListPage {
+    width: 100%;
+    max-height: 500px;
+    // display: flex;
+    // flex-direction: column;
+    .headerPage {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        // margin: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        .titleList {
+            width: 100px;
+            height: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            margin-left: 80px;
+            display: flex;
+            p {
+                margin: auto;
+            }
+        }
+        .sideRight {
+            display: flex;
+            flex-direction: row;
+            height: 40px;
+            .search-group {
+                width: auto;
+                display: flex;
+                flex-direction: row;
+                border: 1px;
+                border-style: solid;
+                border-color: #cccccc;
+                border-radius: 5px;
+                // margin-right: 10px;
+                margin: auto;
+                .bt-icon-search {
+                    width: auto;
+                    height: auto;
+                    background-color: white !important;
+                    margin: auto;
+                }
+                .input-serch {
+                    width: 100%;
+                    height: 40px;
+                    border: 0px;
+                    border: none;
+                    outline: none;
+                    margin: auto;
+                    padding: 10px;
+                }
+            }
+            .option {
+                display: flex;
+                flex-direction: row;
+                .btn {
+                    width: auto !important;
+                    height: 40px !important;
+                    // padding: 20px;
+                }
+                .btn-primary {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .container {
+        .row {
+            .col {
+                .btn {
+                    white-space: nowrap;
+                }
+                p {
+                    font-weight: 700 !important;
+                    line-height: 24px !important;
+                    font-size: 16px !important;
+                }
+            }
+        }
+    }
+    .marginContainer {
+        margin-left: 100px;
+        margin-top: 30px;
+    }
+    .listItemWork {
+        margin-left: 90px;
+        .container {
+            .row {
+                .col {
+                    margin: 10px;
+                    p{
+                        font-weight: 500 !important;
+                        line-height: 15px !important;
+                        font-size: 16px !important;
+                        color: gray;
+                    }
+                    .yellow {
+                        color: yellow;
+                    }
+                    .green {
+                        color: green;
+                    }
+                    .blue-sky {
+                        color: skyblue;
+                    }
+                    .red{
+                        color: red;
+                    }
+                    .blue{
+                        color: blue;
+                    }
+                    .black{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+
+    .area-change-list {
+        margin: auto;
+        .list-change {
+            // width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            .bt-change-list {
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
